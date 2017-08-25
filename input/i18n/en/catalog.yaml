@@ -56,6 +56,8 @@ holograms:
   add: Add item to saved holograms
   view: View your saved holograms
   recentlyAdded: My recently added items
+reserve:
+  btn: Reserve in store
 suggestions:
   title: You may also like
 reviews:

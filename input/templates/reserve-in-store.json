@@ -1,0 +1,24 @@
+{
+    "header": {
+        "$ref": "common/header.json"
+    },
+    "footer": {
+        "$ref": "common/footer.json"
+    },
+    "content": {
+        "stores": [
+            {
+                "$ref": "catalog/reserve/store-1.json"
+            },
+            {
+                "$ref": "catalog/reserve/store-2.json"
+            },
+            {
+                "$ref": "catalog/reserve/store-3.json"
+            }
+        ]
+    },
+    "meta": {
+        "$ref": "common/meta.json"
+    }
+}

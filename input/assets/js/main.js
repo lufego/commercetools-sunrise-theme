@@ -64,6 +64,11 @@ $(document).ready(function() {
       theme:"dark",
       scrollInertia:50
     });
+
+    $(".store-location-wrapper > .addresses").mCustomScrollbar({
+      theme:"dark-thin",
+      scrollInertia:50
+    });
   });
 
   // "Select" elements becomes customized
@@ -92,6 +97,7 @@ $(document).ready(function() {
   $('.list-item-location, .list-item-bag, .nav-minicart').click(function(event) {
     event.stopPropagation();
   });
+
 });
 
 // Toggling plus and minus icons for mobile navigation menu
