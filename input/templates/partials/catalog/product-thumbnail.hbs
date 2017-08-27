@@ -18,7 +18,7 @@
         <span class="sr-only">{{i18n "catalog:wishlist.add"}}</span>
       </button>
     </form>
-    <form id="form-add-to-saved-holograms-mobile{{index}}" method="post" {{#if holograms}}class="hidden"{{/if}} name="add-to-saved-holograms-mobile" action="{{@root.meta._links.addToWishlist.href}}">
+    <form id="form-add-to-saved-holograms-mobile{{index}}" method="post" name="add-to-saved-holograms-mobile" action="{{@root.meta._links.addToWishlist.href}}">
         <button type="submit" class="hologram-xs visible-xs">
         <span class="sr-only">{{i18n "catalog:holograms.add"}}</span>
       </button>
