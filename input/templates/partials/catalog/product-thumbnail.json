@@ -1,6 +1,7 @@
 {
-      "sale" : true,
+      "sale" : false,
       "new" : true,
+      "hologram" : true,
       "moreColors" : true,
       "product" : { "$ref" : "product.json" }
 }

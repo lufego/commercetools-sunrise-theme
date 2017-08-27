@@ -20,7 +20,7 @@
     margin-top: 15px;
     text-align: center;
     text-transform: none;
-    padding: 0 20px;
+    padding: 0 15px;
     min-height: 50px;
     color: $gray;
     .name-headline,
@@ -32,7 +32,8 @@
     }
   }
   .pop-item-price {
-    text-align: center;
+    text-align: left;
+    margin-left: 15px;
     font-weight: 700;
     .strikethrough {
       text-decoration: line-through;
@@ -43,8 +44,8 @@
   }
   .pop-product-more-colors {
     color: $gray;
-    text-align: center;
-    margin: 10px 0;
+    text-align: left;
+    margin: 10px 20px;
     font-size: 12px;
   }
   .product-thumbnail-swatch-red {
@@ -86,6 +87,20 @@
     font-size: 16px;
     z-index: 100;
   }
+  .hologram-flag {
+    border: 2px solid $ship-cove;
+    color: $ship-cove;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 8px;
+    z-index: 100;
+  }
   .new-flag {
     color: $mine-shaft;
     left: 10px;
@@ -100,7 +115,23 @@
     display: block;
     position: absolute;
     bottom: 10px;
-    right: 10px;
+    right: 20px;
+    &:hover,
+    &:focus {
+      background-position: -60px;
+    }
+  }
+  .hologram-xs {
+    width: 50px;
+    height: 50px;
+    background: url("../img/holograms_sprite.png") no-repeat;
+    background-size: 170px;
+    padding: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 80px;
     &:hover,
     &:focus {
       background-position: -60px;
@@ -133,6 +164,21 @@
       &:hover,
       &:focus {
         border: solid 2px white;
+      }
+    }
+    .hologram {
+      width: 50px;
+      height: 50px;
+      background: url("../img/holograms_sprite.png") no-repeat;
+      background-size: 170px;
+      padding: 0;
+      margin: auto;
+      display: block;
+      position: relative;
+      top: 190px;
+      &:hover,
+      &:focus {
+        background-position: -60px;
       }
     }
     .heart {

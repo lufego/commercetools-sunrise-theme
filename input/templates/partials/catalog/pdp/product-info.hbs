@@ -23,12 +23,11 @@
     </div>
   </div>
   {{> catalog/add-to-cart}}
-    {{> catalog/add-to-wishlist}}
   {{> catalog/add-to-wishlist-btn}}
+  <!-- #if content.attributes.hasHologram}} -->
+  {{> catalog/add-to-saved-holograms}}
+  <!-- /if}} -->
   {{> catalog/reserve-in-store-btn}}
-    <!-- #if content.attributes.hasHologram}} -->
-    {{> catalog/add-to-saved-holograms}}
-    <!-- /if}} -->
   <div class="row">
     <div class="col-sm-12">
       {{> catalog/product-availability availability=product.availability}}

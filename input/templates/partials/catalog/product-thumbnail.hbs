@@ -3,6 +3,9 @@
     {{#if thumbnail.sale}}
       <div class="sale-flag">{{i18n "catalog:thumbnail.sale"}}</div>
     {{/if}}
+    {{#if thumbnail.hologram}}
+      <div class="hologram-flag">{{i18n "catalog:thumbnail.hologram"}}</div>
+    {{/if}}
     {{#if thumbnail.new}}
       <div class="new-flag">{{i18n "catalog:thumbnail.new"}}</div>
     {{/if}}
@@ -13,6 +16,11 @@
 
         <button type="submit" class="heart-xs visible-xs">
         <span class="sr-only">{{i18n "catalog:wishlist.add"}}</span>
+      </button>
+    </form>
+    <form id="form-add-to-saved-holograms-mobile{{index}}" method="post" {{#if holograms}}class="hidden"{{/if}} name="add-to-saved-holograms-mobile" action="{{@root.meta._links.addToWishlist.href}}">
+        <button type="submit" class="hologram-xs visible-xs">
+        <span class="sr-only">{{i18n "catalog:holograms.add"}}</span>
       </button>
     </form>
     <div class="pop-product-image">
@@ -55,6 +63,11 @@
 
           <button type="submit" class="heart">
           <span class="sr-only">{{i18n "catalog:wishlist.add"}}</span>
+        </button>
+      </form>
+      <form id="form-add-to-saved-holograms{{index}}" method="post" {{#if wishlist}}class="hidden"{{/if}} name="add-to-saved-holograms" action="{{@root.meta._links.addToSavedHolograms.href}}">
+          <button type="submit" class="hologram">
+          <span class="sr-only">{{i18n "catalog:holograms.add"}}</span>
         </button>
       </form>
     </div>

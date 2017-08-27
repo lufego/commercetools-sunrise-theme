@@ -3,6 +3,7 @@ messages:
   itemAddedToCart: Der Artikel wurde in den Warenkorb gelegt.
 thumbnail:
   sale: Sale
+  hologram: Hologram
   new: Neu
   quickView: Schnellansicht
   moreColors: Mehr Farben

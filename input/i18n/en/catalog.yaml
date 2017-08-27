@@ -3,6 +3,7 @@ messages:
   itemAddedToCart: This item has been added to your bag
 thumbnail:
   sale: Sale
+  hologram: Hologram
   new: New
   quickView: Quick view
   moreColors: More colours
