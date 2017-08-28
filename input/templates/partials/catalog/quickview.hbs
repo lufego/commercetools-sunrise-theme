@@ -41,16 +41,15 @@
             <div class="row select-row">
               {{> catalog/add-to-cart}}
             </div>
-            <div class="quickview-wishlist-row">
-              <ul class="list-inline">
-                <li {{#if wishlist}}class="hidden"{{/if}}>
-                  {{> catalog/add-to-wishlist-btn}}
-                </li>
-                <li>
-                  {{> catalog/product-availability availability=product.availability}}
-                </li>
-              </ul>
-            </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                  {{> catalog/add-to-wishlist}}
+                  </div>
+                  <div class="col-sm-12">
+                      {{> catalog/add-to-saved-holograms}}
+                  </div>
+              </div>
+
           </div>
         </div>
       </div>

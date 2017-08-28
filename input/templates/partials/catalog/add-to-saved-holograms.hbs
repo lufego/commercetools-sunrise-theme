@@ -1,5 +1,8 @@
-<form class="pdp-form-button-container" id="form-add-to-holograms{{index}}" name="add-to-holograms" action="{{@root.meta._links.addToSavedHolograms.href}}">
-  <button type="submit" class="btn pdp-product-hologram">
+<form class="pdp-form-button-container" id="form-add-to-holograms{{index}}" method="post" name="add-to-holograms" action="{{@root.meta._links.addToHololist.href}}">
+    <input type="hidden" name="csrfToken" value="{{@root.meta.csrfToken}}"/>
+    <input type="hidden" name="productId" value="{{product.productId}}">
+    <input type="hidden" name="variantId" value="{{product.variantId}}">
+    <button type="submit" class="btn pdp-product-hologram">
     <span class="sr-only">{{i18n "catalog:holograms.add"}}</span>
   </button>
 </form>

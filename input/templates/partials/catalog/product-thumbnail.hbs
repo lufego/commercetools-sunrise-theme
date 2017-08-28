@@ -18,7 +18,10 @@
         <span class="sr-only">{{i18n "catalog:wishlist.add"}}</span>
       </button>
     </form>
-    <form id="form-add-to-saved-holograms-mobile{{index}}" method="post" name="add-to-saved-holograms-mobile" action="{{@root.meta._links.addToWishlist.href}}">
+    <form id="form-add-to-saved-holograms-mobile{{index}}" method="post" name="add-to-saved-holograms-mobile" action="{{@root.meta._links.addToHololist.href}}">
+        <input type="hidden" name="csrfToken" value="{{@root.meta.csrfToken}}"/>
+        <input type="hidden" name="productId" value="{{product.productId}}">
+        <input type="hidden" name="variantId" value="{{product.variantId}}">
         <button type="submit" class="hologram-xs visible-xs">
         <span class="sr-only">{{i18n "catalog:holograms.add"}}</span>
       </button>
@@ -65,7 +68,10 @@
           <span class="sr-only">{{i18n "catalog:wishlist.add"}}</span>
         </button>
       </form>
-      <form id="form-add-to-saved-holograms{{index}}" method="post" {{#if wishlist}}class="hidden"{{/if}} name="add-to-saved-holograms" action="{{@root.meta._links.addToSavedHolograms.href}}">
+      <form id="form-add-to-saved-holograms{{index}}" method="post" {{#if wishlist}}class="hidden"{{/if}} name="add-to-saved-holograms" action="{{@root.meta._links.addToHololist.href}}">
+          <input type="hidden" name="csrfToken" value="{{@root.meta.csrfToken}}"/>
+          <input type="hidden" name="productId" value="{{product.productId}}">
+          <input type="hidden" name="variantId" value="{{product.variantId}}">
           <button type="submit" class="hologram">
           <span class="sr-only">{{i18n "catalog:holograms.add"}}</span>
         </button>
