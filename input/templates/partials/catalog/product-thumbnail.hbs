@@ -9,7 +9,7 @@
     {{#if thumbnail.new}}
       <div class="new-flag">{{i18n "catalog:thumbnail.new"}}</div>
     {{/if}}
-    <form id="form-add-to-wishlist-mobile{{index}}" method="post" {{#if wishlist}}class="hidden"{{/if}} name="add-to-wishlist-mobile" action="{{@root.meta._links.addToWishlist.href}}">
+    <form id="form-add-to-wishlist-mobile{{index}}" method="post" {{#if wishlist}} class="hidden"{{/if}} name="add-to-wishlist-mobile" action="{{@root.meta._links.addToWishlist.href}}">
         <input type="hidden" name="csrfToken" value="{{@root.meta.csrfToken}}"/>
         <input type="hidden" name="productId" value="{{product.productId}}">
         <input type="hidden" name="variantId" value="{{product.variantId}}">
@@ -18,7 +18,7 @@
         <span class="sr-only">{{i18n "catalog:wishlist.add"}}</span>
       </button>
     </form>
-    <form id="form-add-to-saved-holograms-mobile{{index}}" method="post" name="add-to-saved-holograms-mobile" action="{{@root.meta._links.addToHololist.href}}">
+    <form id="form-add-to-saved-holograms-mobile{{index}}" method="post" {{#unless product.hasHologram}}class="hidden"{{/unless}} name="add-to-saved-holograms-mobile" action="{{@root.meta._links.addToHololist.href}}">
         <input type="hidden" name="csrfToken" value="{{@root.meta.csrfToken}}"/>
         <input type="hidden" name="productId" value="{{product.productId}}">
         <input type="hidden" name="variantId" value="{{product.variantId}}">
@@ -68,7 +68,7 @@
           <span class="sr-only">{{i18n "catalog:wishlist.add"}}</span>
         </button>
       </form>
-      <form id="form-add-to-saved-holograms{{index}}" method="post" {{#if wishlist}}class="hidden"{{/if}} name="add-to-saved-holograms" action="{{@root.meta._links.addToHololist.href}}">
+      <form id="form-add-to-saved-holograms{{index}}" method="post" {{#unless product.hasHologram}}class="hidden"{{/unless}} name="add-to-saved-holograms" action="{{@root.meta._links.addToHololist.href}}">
           <input type="hidden" name="csrfToken" value="{{@root.meta.csrfToken}}"/>
           <input type="hidden" name="productId" value="{{product.productId}}">
           <input type="hidden" name="variantId" value="{{product.variantId}}">
